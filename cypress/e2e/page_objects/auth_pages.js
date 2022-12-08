@@ -26,17 +26,22 @@ class AuthPage extends Page {
         return (`button[name='submit']`);
     }
 
-    login(email,password){
+    login(emailEntered,passwordEntered){
        this.open();
        cy.get(this.btnSignInOrRegister).click();
 
+        const sentArgs={email:emailEntered,password:passwordEntered}
+
        cy.origin(
         "https://dev-mlluudmotpwoldtv.us.auth0.com",
-        { args: {} },
-        ({}) => {
-            cy.get(this.inputEmail).type(email);
-            cy.get(this.inputPassord).type(password,{log:false});
-            cy.get(this.btnLogin_SignUp).click();
+        { args: sentArgs },
+        ({email,password}) => {
+            // cy.get(this.inputEmail).type(email);
+            // cy.get(this.inputPassord).type(password,{log:false});
+
+            cy.get(`[name='email']`).type(email);
+            cy.get(`[name='password']`).type(password, { log: false }); 
+            cy.get(`button[name='submit']`).click();
         }
        ); 
     }
