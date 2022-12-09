@@ -10,8 +10,8 @@ class AuthPage extends Page {
         return (`//a[text()='Log In']`);
     }
 
-    get tabSignUp(){
-        return (`//a[text()='Sign Up']`);
+    get tabLoginOrSignUp(){
+        return (`li>a[href='#']`);
     }
 
     get inputEmail(){
@@ -22,28 +22,50 @@ class AuthPage extends Page {
         return (`[name='password']`);
     }
 
-    get btnLogin_SignUp(){
+    get btnLoginOrSignUp(){
         return (`button[name='submit']`);
     }
 
+    get divPasswordErrorMessage(){
+        return (`.auth0-lock-error-invalid-hint`);
+    }
+
     login(emailEntered,passwordEntered){
-       this.open();
-       cy.get(this.btnSignInOrRegister).click();
 
-        const sentArgs={email:emailEntered,password:passwordEntered}
+        const sentArgs={emailValue:emailEntered, passwordValue:passwordEntered,
+                        emailLoactor:this.inputEmail, passwordLocator:this.inputPassord,
+                        loginBtnLocator:this.btnLoginOrSignUp}
 
-       cy.origin(
-        "https://dev-mlluudmotpwoldtv.us.auth0.com",
-        { args: sentArgs },
-        ({email,password}) => {
-            // cy.get(this.inputEmail).type(email);
-            // cy.get(this.inputPassord).type(password,{log:false});
-
-            cy.get(`[name='email']`).type(email);
-            cy.get(`[name='password']`).type(password, { log: false }); 
-            cy.get(`button[name='submit']`).click();
-        }
+        cy.origin(
+            "https://dev-mlluudmotpwoldtv.us.auth0.com",
+            { args: sentArgs },
+            ({emailValue,passwordValue,emailLoactor,passwordLocator,loginBtnLocator}) => {
+            
+                cy.get(emailLoactor).type(emailValue);
+                cy.get(passwordLocator).type(passwordValue, { log: false }); 
+                cy.get(loginBtnLocator).click();
+            }
        ); 
+    }
+
+    register(emailEntered,passwordEntered){
+        const sentArgs={emailValue:emailEntered, passwordValue:passwordEntered,
+            emailLoactor:this.inputEmail, passwordLocator:this.inputPassord,
+            loginBtnLocator:this.btnLoginOrSignUp, signUpTabLocator:this.tabLoginOrSignUp}
+
+        cy.origin(
+            "https://dev-mlluudmotpwoldtv.us.auth0.com",
+            { args: sentArgs },
+            ({emailValue,passwordValue,emailLoactor,passwordLocator,loginBtnLocator,signUpTabLocator}) => {
+            
+                cy.get(signUpTabLocator).click();
+
+                cy.get(emailLoactor).type(emailValue);
+                cy.get(passwordLocator).type(passwordValue, { log: false }); 
+                cy.get(loginBtnLocator).click();
+            }
+       ); 
+
     }
 }
 module.exports = new AuthPage();
