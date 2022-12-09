@@ -2,6 +2,7 @@ import Page from "./page";
 
 class AuthPage extends Page {
 
+    //AuthPage getters
     get btnSignInOrRegister(){
         return (`#signInOrRegister`);
     }    
@@ -30,8 +31,10 @@ class AuthPage extends Page {
         return (`.auth0-lock-error-invalid-hint`);
     }
 
+    //Page object methods
     login(emailEntered,passwordEntered){
 
+        //Set argument for all css locators and input values to be passed to orign
         const sentArgs={emailValue:emailEntered, passwordValue:passwordEntered,
                         emailLoactor:this.inputEmail, passwordLocator:this.inputPassord,
                         loginBtnLocator:this.btnLoginOrSignUp}
@@ -49,6 +52,8 @@ class AuthPage extends Page {
     }
 
     register(emailEntered,passwordEntered){
+
+        //Set argument for all css locators and input values to be passed to orign
         const sentArgs={emailValue:emailEntered, passwordValue:passwordEntered,
             emailLoactor:this.inputEmail, passwordLocator:this.inputPassord,
             loginBtnLocator:this.btnLoginOrSignUp, signUpTabLocator:this.tabLoginOrSignUp}
