@@ -5,6 +5,8 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl:'https://ui-automation-camp.vercel.app/'
+    baseUrl:'https://ui-automation-camp.vercel.app/',
+    viewportWidth: 1000,
+    viewportHeight: 660
   },
 });
