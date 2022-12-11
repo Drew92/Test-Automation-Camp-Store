@@ -35,7 +35,7 @@ describe("Add to Cart Tests",()=>{
 
     });
 
-    it("Add item to cart twice, 1 the first time, 3 the second time",()=>{
+    it("Add item (Quality Fitted Hat) to cart twice, 1 the first time, 3 the second time",()=>{
        
 
         HomePage.addQFittedHat(false);
