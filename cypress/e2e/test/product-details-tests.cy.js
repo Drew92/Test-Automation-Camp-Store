@@ -61,14 +61,16 @@ describe("Home and Product Gallery page Tests",()=>{
         
     });
 
-    it.only("Should be able to navigate back to products gallery page",()=>{
+    it("Should be able to navigate back to products gallery page",()=>{
 
 
         //assertions
         cy.get(ProductDetailsPage.linkBackToProducts).should('be.visible').click();
 
-       
-        cy.url().should('', 'https://qualityworkscg.com/automation-bootcamp/');
+        cy.wait(2000);
+
+        //check that user is on home page
+        cy.url().should('eq', Cypress.config().baseUrl + 'products');
 
 
     });
