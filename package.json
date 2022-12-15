@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "auth-tests": "npx cypress run --spec cypress\\e2e\\test\\authentication.cy.js --headed"
+    "auth-tests": "npx cypress run --spec cypress\\e2e\\test\\authentication.cy.js --headed",
+    "sort-fliter-chr": "npx cypress run --spec cypress\\e2e\\test\\filtering-and-sorting-tests.cy.js --headed --browser chrome",
+    "sort-fliter-ffox": "npx cypress run --spec cypress\\e2e\\test\\filtering-and-sorting-tests.cy.js --headed --browser firefox"
+
   },
   "keywords": [],
   "author": "",
