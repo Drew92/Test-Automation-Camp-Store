@@ -4,7 +4,7 @@ import AuthPage from '../page_objects/auth_pages'
 import HomePage from '../page_objects/home_and_product_gallery_page'
 import campStoreProducts from '../data/camp_store_products'
 
-describe("Sorting and Filter Tests",()=>{
+describe("Search Tests",()=>{
     
     beforeEach(() => {
         AuthPage.open();
