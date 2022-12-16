@@ -18,7 +18,7 @@ class HomePage extends Page {
    
     //HomePage object methods
 
-    addQFittedHat(increaseQtyBy2){
+    addQFittedHatMoreThanOnce(increaseQtyBy2){
         cy.get(this.btnAddToCart_QFittedHat).scrollIntoView();
         cy.wait(3000);
 

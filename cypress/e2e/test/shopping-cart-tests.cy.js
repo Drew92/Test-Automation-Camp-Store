@@ -10,7 +10,7 @@ describe("Add to Cart Tests",()=>{
         AuthPage.open();
         cy.get(AuthPage.btnSignInOrRegister).click();
         AuthPage.login("drewtest@ahmail.com","bc123Quality");
-        HomePage.addQFittedHat(true);
+        HomePage.addQFittedHatMoreThanOnce(true);
         cy.wait(2000);
       });
 
@@ -24,7 +24,7 @@ describe("Add to Cart Tests",()=>{
     });
 
     
-    it("Should increase and Decrease item (Quality Fitted Hat) quantity in cart",()=>{
+    it("Should Increase and Decrease item (Quality Fitted Hat) quantity in cart",()=>{
 
         //assertions
         cy.get(CartPage.li_ItemRecordInCart).contains('Quality Fitted Hat').should('be.visible');
