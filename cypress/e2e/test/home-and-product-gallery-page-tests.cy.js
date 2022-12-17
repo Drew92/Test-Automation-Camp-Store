@@ -44,19 +44,6 @@ describe("Home and Product Gallery page Tests",()=>{
 
     it("Should open About page when about button is clicked",()=>{
 
-        // cy.wait(4000)
-        // cy.get(HomePage.iFrame)
-        // .its('0.ownerDocument.body')
-        // .should('exist')
-        // .then(cy.wrap)
-        // .find(HomePage.iFrameVideo)
-        // .should('be.visible').click();
-
-        //assertions
-        //assertions
-
-        //cy.get(HomePage.imgQFittedHat).scrollIntoView().should('be.en').click();
-
         cy.get(HomePage.linkAbout)
         .invoke('removeAttr', 'target') //removes the target attribute from the link which forces the About page to open in a new tab 
         .click();
