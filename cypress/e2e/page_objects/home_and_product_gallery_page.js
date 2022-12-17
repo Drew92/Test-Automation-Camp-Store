@@ -18,12 +18,12 @@ class HomePage extends Page {
    
     //HomePage object methods
 
-    addQFittedHat(increaseQtyBy3){
+    addQFittedHatMoreThanOnce(increaseQtyBy2){
         cy.get(this.btnAddToCart_QFittedHat).scrollIntoView();
         cy.wait(3000);
 
-        if(increaseQtyBy3){
-            cy.get(this.btnIncreaseQty_QFittedHat).should('be.visible').click().click();
+        if(increaseQtyBy2){
+            cy.get(this.btnIncreaseQty_QFittedHat).should('be.visible').click().click(); //increases item qty by 2
         }
         cy.get(this.btnAddToCart_QFittedHat).should('be.visible').click();
          

@@ -25,6 +25,22 @@ class CartPage extends Page {
         return (`.snipcart-modal__close-title`);
     } 
 
+    get btnRemoveItem(){
+        return (`button[title='Remove item']`);
+    } 
+    
+    get btnIncreaseItemQty(){
+        return (`button[title='Increment quantity']`);
+    } 
+
+    get btnDecreaseItemQty(){
+        return (`button[title='Decrement quantity']`);
+    } 
+
+    get sectionEmptyCart(){
+        return (`.snipcart-empty-cart__title`);
+    } 
+    
 
 }
 module.exports = new CartPage();

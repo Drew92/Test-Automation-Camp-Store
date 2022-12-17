@@ -14,7 +14,7 @@ describe("Add to Cart Tests",()=>{
 
     it("Add single item (Quality Fitted Hat) to cart from product gallery home page",()=>{
        
-        HomePage.addQFittedHat(false);
+        HomePage.addQFittedHatMoreThanOnce(false);
 
         //assertions
         cy.wait(3000);
@@ -26,7 +26,7 @@ describe("Add to Cart Tests",()=>{
     it("Add item to cart (Quality Fitted Hat) with a quantity greater than 1",()=>{
        
 
-        HomePage.addQFittedHat(true);
+        HomePage.addQFittedHatMoreThanOnce(true);
    
 
         //assertions
@@ -35,12 +35,12 @@ describe("Add to Cart Tests",()=>{
 
     });
 
-    it("Add item to cart twice, 1 the first time, 3 the second time",()=>{
+    it("Add item (Quality Fitted Hat) to cart twice, 1 the first time, 3 the second time",()=>{
        
 
-        HomePage.addQFittedHat(false);
+        HomePage.addQFittedHatMoreThanOnce(false);
         cy.get(CartPage.spanContinueShopping).click();
-        HomePage.addQFittedHat(true);
+        HomePage.addQFittedHatMoreThanOnce(true);
 
         //assertions
         cy.get(CartPage.li_ItemRecordInCart).contains('Quality Fitted Hat').should('be.visible');
