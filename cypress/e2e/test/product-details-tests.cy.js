@@ -4,7 +4,7 @@ import AuthPage from '../page_objects/auth_pages'
 import HomePage from '../page_objects/home_and_product_gallery_page'
 import ProductDetailsPage from '../page_objects/product_details_page'
 
-describe("Home and Product Gallery page Tests",()=>{
+describe("Product Details Page Tests",()=>{
     
     beforeEach(() => {
         AuthPage.open();

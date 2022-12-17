@@ -2,6 +2,8 @@ import Page from "./page";
 
 class ProductDetailsPage extends Page {
 
+    //Page object getters
+
     get linkBackToProducts(){
         return (`.chakra-heading.css-18j379d`);
     } 
