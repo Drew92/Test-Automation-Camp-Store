@@ -2,6 +2,8 @@ import Page from "./page";
 
 class ContactPage extends Page {
 
+    //Page object getters
+
     get inputFirstName(){
         return (`#firstName`);
     }  

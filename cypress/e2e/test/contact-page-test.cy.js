@@ -26,7 +26,7 @@ describe("Contact Page Tests",()=>{
     
     });
 
-    it("Should attempt to send message with incorrect email format",()=>{
+    it("Should not be able to send message with incorrect email format",()=>{
 
         ContactPage.createMessage(faker.name.firstName(),faker.name.lastName(),'badAdress@mail',faker.lorem.words(),faker.lorem.sentence());
         cy.wait(1000);
