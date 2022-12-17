@@ -5,6 +5,13 @@
   "main": "index.js",
   "scripts": {
     "auth-tests": "npx cypress run --spec cypress\\e2e\\test\\authentication.cy.js --headed",
+    "add-to-cart-chr": "npx cypress run --spec cypress\\e2e\\test\\add-to-cart.cy.js --headed --browser chrome",
+    "add-to-cart-ffox": "npx cypress run --spec cypress\\e2e\\test\\add-to-cart.cy.js --headed --browser firefox",
+    "cart-tests-chr": "npx cypress run --spec cypress\\e2e\\test\\shopping-cart-tests.cy.js --headed --browser chrome",
+    "cart-tests-ffox": "npx cypress run --spec cypress\\e2e\\test\\shopping-cart-tests.cy.js --headed --browser firefox",
+    "complete-checkout-chr": "npx cypress run --spec cypress\\e2e\\test\\complete-checkout-of-items-tests.cy.js --headed --browser chrome",
+    "homepage-tests-chr": "npx cypress run --spec cypress\\e2e\\test\\home-and-product-gallery-page-tests.cy.js --headed --browser chrome",
+    "homepage-tests-ffox": "npx cypress run --spec cypress\\e2e\\test\\home-and-product-gallery-page-tests.cy.js --headed --browser firefox",
     "prod-details-chr": "npx cypress run --spec cypress\\e2e\\test\\product-details-tests.cy.js --headed --browser chrome",
     "prod-details-ffox": "npx cypress run --spec cypress\\e2e\\test\\product-details-tests.cy.js --headed --browser firefox"
   },
@@ -14,5 +21,8 @@
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
     "cypress": "^12.0.1"
+  },
+  "dependencies": {
+    "cypress-iframe": "^1.0.1"
   }
 }
