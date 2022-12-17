@@ -6,7 +6,10 @@ class HomePage extends Page {
 
     get btnSignOut(){
         return (`#top-sign-out`);
-
+    }  
+    
+    get btnContact(){
+        return (`#top-contact`);
     }  
     
     get imgQFittedHat(){
@@ -33,26 +36,12 @@ class HomePage extends Page {
         return (`a[href='https://qualityworkscg.com/automation-bootcamp/']`);
     }
 
-
     get btnAddToCart_QFittedHat(){
         return (`button[data-item-id="quality-hat-model"]`);
     } 
 
     get btnIncreaseQty_QFittedHat(){
         return (`#product-0-increase`);
-    }
-   
-    //HomePage object methods
-
-    addQFittedHatMoreThanOnce(increaseQtyBy2){
-        cy.get(this.btnAddToCart_QFittedHat).scrollIntoView();
-        cy.wait(3000);
-
-        if(increaseQtyBy2){
-            cy.get(this.btnIncreaseQty_QFittedHat).should('be.visible').click().click(); //increases item qty by 2
-        }
-        cy.get(this.btnAddToCart_QFittedHat).should('be.visible').click();
-         
     }
 
     get selectSortOptions(){
@@ -79,8 +68,18 @@ class HomePage extends Page {
         return (`#reset`);
     }
     
+  //HomePage object methods
 
-    //Page object methods
+    addQFittedHatMoreThanOnce(increaseQtyBy2){
+        cy.get(this.btnAddToCart_QFittedHat).scrollIntoView();
+        cy.wait(3000);
+
+        if(increaseQtyBy2){
+            cy.get(this.btnIncreaseQty_QFittedHat).should('be.visible').click().click(); //increases item qty by 2
+        }
+        cy.get(this.btnAddToCart_QFittedHat).should('be.visible').click();
+         
+    }
 
     selectSortOption(option){
         cy.get(this.selectSortOptions).should('exist').select(option);

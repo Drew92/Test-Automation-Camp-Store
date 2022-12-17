@@ -17,8 +17,9 @@
     "sort-fliter-chr": "npx cypress run --spec cypress\\e2e\\test\\filtering-and-sorting-tests.cy.js --headed --browser chrome",
     "sort-fliter-ffox": "npx cypress run --spec cypress\\e2e\\test\\filtering-and-sorting-tests.cy.js --headed --browser firefox",
     "search-test-chr": "npx cypress run --spec cypress\\e2e\\test\\search-tests.cy.js --headed --browser chrome",
-    "search-test-ffox": "npx cypress run --spec cypress\\e2e\\test\\search-tests.cy.js --headed --browser firefox"
-
+    "search-test-ffox": "npx cypress run --spec cypress\\e2e\\test\\search-tests.cy.js --headed --browser firefox",
+    "contact-page-chr": "npx cypress run --spec cypress\\e2e\\test\\contact-page-test.cy.js --headed --browser chrome",
+    "contact-page-ffox": "npx cypress run --spec cypress\\e2e\\test\\contact-page-test.cy.js --headed --browser firefox"
   },
   "keywords": [],
   "author": "",
