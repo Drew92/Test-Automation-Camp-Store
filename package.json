@@ -19,7 +19,9 @@
     "search-test-chr": "npx cypress run --spec cypress\\e2e\\test\\search-tests.cy.js --headed --browser chrome",
     "search-test-ffox": "npx cypress run --spec cypress\\e2e\\test\\search-tests.cy.js --headed --browser firefox",
     "contact-page-chr": "npx cypress run --spec cypress\\e2e\\test\\contact-page-test.cy.js --headed --browser chrome",
-    "contact-page-ffox": "npx cypress run --spec cypress\\e2e\\test\\contact-page-test.cy.js --headed --browser firefox"
+    "contact-page-ffox": "npx cypress run --spec cypress\\e2e\\test\\contact-page-test.cy.js --headed --browser firefox",
+    "ddt-contact-page-chr": "npx cypress run --spec cypress\\e2e\\test\\contact-page-data-driven-tests.cy.js --headed --browser chrome",
+    "ddt-contact-page-ffox": "npx cypress run --spec cypress\\e2e\\test\\contact-page-data-driven-tests.cy.js --headed --browser firefox"
   },
   "keywords": [],
   "author": "",
