@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "auth-tests": "npx cypress run --spec cypress\\e2e\\test\\authentication.cy.js --headed",
+    "auth-tests-chr": "npx cypress run --spec cypress\\e2e\\test\\authentication.cy.js --headed --browser chrome",
+    "auth-tests-ffox": "npx cypress run --spec cypress\\e2e\\test\\authentication.cy.js --headed --browser firefox",
     "add-to-cart-chr": "npx cypress run --spec cypress\\e2e\\test\\add-to-cart.cy.js --headed --browser chrome",
     "add-to-cart-ffox": "npx cypress run --spec cypress\\e2e\\test\\add-to-cart.cy.js --headed --browser firefox",
     "cart-tests-chr": "npx cypress run --spec cypress\\e2e\\test\\shopping-cart-tests.cy.js --headed --browser chrome",
