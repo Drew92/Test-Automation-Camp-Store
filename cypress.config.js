@@ -8,6 +8,13 @@ module.exports = defineConfig({
     baseUrl:'https://ui-automation-camp.vercel.app/',
     viewportWidth: 1000,
     viewportHeight: 660,
-    chromeWebSecurity: false
+    chromeWebSecurity: false,
+    reporter: 'mochawesome',
+    reporterOptions: {
+    reportDir: 'cypress/reports',
+    overwrite: false,
+    html: false,
+    json: true
+    }
   },
 });
