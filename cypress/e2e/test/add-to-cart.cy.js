@@ -12,7 +12,7 @@ describe("Add to Cart Tests",()=>{
         AuthPage.login("drewtest@ahmail.com","bc123Quality");
       });
 
-    it("Add single item (Quality Fitted Hat) to cart from product gallery home page",()=>{
+    it("Should add single item (Quality Fitted Hat) to cart from product gallery home page",()=>{
        
         HomePage.addQFittedHatMoreThanOnce(false);
 
@@ -23,7 +23,7 @@ describe("Add to Cart Tests",()=>{
     });
 
     
-    it("Add item to cart (Quality Fitted Hat) with a quantity greater than 1",()=>{
+    it("should add item to cart (Quality Fitted Hat) with a quantity greater than 1",()=>{
        
 
         HomePage.addQFittedHatMoreThanOnce(true);
@@ -35,7 +35,7 @@ describe("Add to Cart Tests",()=>{
 
     });
 
-    it("Add item (Quality Fitted Hat) to cart twice, 1 the first time, 3 the second time",()=>{
+    it("Should add item (Quality Fitted Hat) to cart twice, 1 the first time, 3 the second time",()=>{
        
 
         HomePage.addQFittedHatMoreThanOnce(false);
