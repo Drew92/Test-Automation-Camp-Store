@@ -36,14 +36,16 @@ describe("Add to Cart Tests",()=>{
 
     });
 
-    it("Decrease item (Quality Fitted Hat) quantity to zero should remove it from the cart",()=>{
+    it("Should remove item (Quality Fitted Hat) from cart when its quantity is decreased to zero ",()=>{
        
+        
+        cy.get(CartPage.btnDecreaseItemQty).should('be.visible').click();
+        cy.wait(1000);
+        cy.get(CartPage.btnDecreaseItemQty).should('be.visible').click();
+        cy.wait(1000);
+        cy.get(CartPage.btnDecreaseItemQty).should('be.visible').click();
+
         //assertions
-        cy.get(CartPage.btnDecreaseItemQty).should('be.visible').click();
-        cy.wait(1000);
-        cy.get(CartPage.btnDecreaseItemQty).should('be.visible').click();
-        cy.wait(1000);
-        cy.get(CartPage.btnDecreaseItemQty).should('be.visible').click();
         cy.get(CartPage.h2TitleOfItemInCart).should('not.exist');
         cy.get(CartPage.sectionEmptyCart).should('be.visible');
 

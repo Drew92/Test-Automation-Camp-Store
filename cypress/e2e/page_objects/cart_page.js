@@ -2,7 +2,7 @@ import Page from "./page";
 
 class CartPage extends Page {
 
-    //Home and Product Gallery Page getters
+    // Page getters
 
 
     get ulCart(){
@@ -40,6 +40,31 @@ class CartPage extends Page {
     get sectionEmptyCart(){
         return (`.snipcart-empty-cart__title`);
     } 
+
+    get btnCheckout(){
+        return (`.snipcart-button-primary`);
+    }
+
+    get btnCloseCart(){
+        return (`div[class='snipcart-cart__secondary-header'] button`);
+    }
+
+    get spanItemQty(){
+        return (`.snipcart-cart-summary-item__quantity.snipcart__font--slim`);
+    }
+
+    //Page object methods
+
+    proceedToCheckout(){
+        cy.get(this.btnCheckout).should('be.visible').click();
+    
+    }
+
+    increaseQtyAndCloseCart(){
+        cy.get(this.btnIncreaseItemQty).should('be.visible').click();
+        cy.get(this.btnCloseCart).should('be.visible').click();
+    
+    }
     
 
 }
