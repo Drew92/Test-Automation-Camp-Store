@@ -36,6 +36,21 @@ class ProductDetailsPage extends Page {
         return (`.chakra-numberinput__field`);
     }
 
+    get svgAddToFavs(){
+        return (`#add-to-favorite`);
+    }
+
+    get svgRemoveFromFavs(){
+        return (`#remove-from-favorite`);
+    }
+
+    addToFavs(){
+        cy.get(this.svgAddToFavs).should('be.visible').click();
+    }
+
+    removeFromFavs(){
+        cy.get(this.svgRemoveFromFavs).should('be.visible').click();
+    }
     
 }
 module.exports = new ProductDetailsPage();

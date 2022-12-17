@@ -67,6 +67,19 @@ class HomePage extends Page {
     get btnReset(){
         return (`#reset`);
     }
+
+    get svgaAddToFav_QWFittedHat(){
+        return (`div[id='product-0'] #add-to-favorite`);
+    }
+
+    get svgRemoveFromFav_QWFittedHat(){
+        return (`div[id='product-0'] #remove-from-favorite`);
+    }
+
+    get btnFavorites(){
+        return (`#top-favorite`);
+    }
+    
     
   //HomePage object methods
 
@@ -106,6 +119,14 @@ class HomePage extends Page {
 
     enterSearchInfo(criteria){
         cy.get(this.inputSearch).should('be.visible').clear().type(criteria);
+    }
+
+    addQWFittedHatToFavs(){
+        cy.get(this.svgaAddToFav_QWFittedHat).should('be.visible').click();
+    }
+
+    removeQWFittedHatFromFavs(){
+        cy.get(this.svgRemoveFromFav_QWFittedHat).should('be.visible').click();
     }
 }
 module.exports = new HomePage();
