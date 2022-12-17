@@ -13,7 +13,9 @@
     "homepage-tests-chr": "npx cypress run --spec cypress\\e2e\\test\\home-and-product-gallery-page-tests.cy.js --headed --browser chrome",
     "homepage-tests-ffox": "npx cypress run --spec cypress\\e2e\\test\\home-and-product-gallery-page-tests.cy.js --headed --browser firefox",
     "prod-details-chr": "npx cypress run --spec cypress\\e2e\\test\\product-details-tests.cy.js --headed --browser chrome",
-    "prod-details-ffox": "npx cypress run --spec cypress\\e2e\\test\\product-details-tests.cy.js --headed --browser firefox"
+    "prod-details-ffox": "npx cypress run --spec cypress\\e2e\\test\\product-details-tests.cy.js --headed --browser firefox",
+    "sort-fliter-chr": "npx cypress run --spec cypress\\e2e\\test\\filtering-and-sorting-tests.cy.js --headed --browser chrome",
+    "sort-fliter-ffox": "npx cypress run --spec cypress\\e2e\\test\\filtering-and-sorting-tests.cy.js --headed --browser firefox"
   },
   "keywords": [],
   "author": "",
