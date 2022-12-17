@@ -9,7 +9,9 @@
     "add-to-cart-ffox": "npx cypress run --spec cypress\\e2e\\test\\add-to-cart.cy.js --headed --browser firefox",
     "cart-tests-chr": "npx cypress run --spec cypress\\e2e\\test\\shopping-cart-tests.cy.js --headed --browser chrome",
     "cart-tests-ffox": "npx cypress run --spec cypress\\e2e\\test\\shopping-cart-tests.cy.js --headed --browser firefox",
-    "complete-checkout-chr": "npx cypress run --spec cypress\\e2e\\test\\complete-checkout-of-items-tests.cy.js --headed --browser chrome"
+    "complete-checkout-chr": "npx cypress run --spec cypress\\e2e\\test\\complete-checkout-of-items-tests.cy.js --headed --browser chrome",
+    "homepage-tests-chr": "npx cypress run --spec cypress\\e2e\\test\\home-and-product-gallery-page-tests.cy.js --headed --browser chrome",
+    "homepage-tests-ffox": "npx cypress run --spec cypress\\e2e\\test\\home-and-product-gallery-page-tests.cy.js --headed --browser firefox"
   },
   "keywords": [],
   "author": "",
