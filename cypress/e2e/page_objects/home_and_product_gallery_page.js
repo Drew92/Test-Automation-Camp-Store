@@ -69,7 +69,15 @@ class HomePage extends Page {
 
     get selectCategory(){
         return (`#category`);
-    } 
+    }
+    
+    get inputSearch(){
+        return (`#search`);
+    }
+
+    get btnReset(){
+        return (`#reset`);
+    }
     
 
     //Page object methods
@@ -95,6 +103,10 @@ class HomePage extends Page {
 
     selectCategoryOption(option){
         cy.get(this.selectCategory).should('exist').scrollIntoView().select(option);
+    }
+
+    enterSearchInfo(criteria){
+        cy.get(this.inputSearch).should('be.visible').clear().type(criteria);
     }
 }
 module.exports = new HomePage();
