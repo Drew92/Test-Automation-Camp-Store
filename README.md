@@ -19,6 +19,7 @@ This project executes the following workflows:
 The project also contains:
 
 * Negative Tests
+* Data Driven Tests for Authentication and Contact Page utilization
 * Uses the `Cypress Mochawesome Reporter`
 * Uses the `NPM Faker` package.
 
@@ -54,6 +55,8 @@ The project also contains:
 | Contact Page utilization | $ npm run contact-page-chr | $ npm run contact-page-ffox |
 | | | |
 | Contact Page Data-Driven-Test | $ npm run ddt-contact-page-chr | $ npm run ddt-contact-page-ffox |
+| | | |
+| Authentication Data-Driven-Test | $ npm run ddt-auth-tests-chr | $ npm run ddt-auth-tests-ffox |
 
 #### Generate Mochawesome Reports
 
@@ -78,5 +81,7 @@ The project also contains:
 | Contact Page utilization | $ npm run rpt-contact-page | 
 | | | 
 | Contact Page Data-Driven-Test | $ npm run rpt-ddt-contact-page | 
+| | | 
+| Authentication Data-Driven-Test | $ npm run rpt-ddt-auth-tests | 
 
 
