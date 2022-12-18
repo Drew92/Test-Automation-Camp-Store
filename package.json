@@ -23,6 +23,8 @@
     "contact-page-ffox": "npx cypress run --spec cypress\\e2e\\test\\contact-page-test.cy.js --headed --browser firefox",
     "ddt-contact-page-chr": "npx cypress run --spec cypress\\e2e\\test\\contact-page-data-driven-tests.cy.js --headed --browser chrome",
     "ddt-contact-page-ffox": "npx cypress run --spec cypress\\e2e\\test\\contact-page-data-driven-tests.cy.js --headed --browser firefox",
+    "ddt-auth-tests-chr": "npx cypress run --spec cypress\\e2e\\test\\authentication_data_driven_tests.cy.js --headed --browser chrome",
+    "ddt-auth-tests-ffox": "npx cypress run --spec cypress\\e2e\\test\\authentication_data_driven_tests.cy.js --headed --browser firefox",
     "clean": "rm -R -f cypress/reports; mkdir cypress/reports; rm -f mochawesome.json",
     "run": "npx cypress run",
     "test": "npm-run-all clean run report -c",
@@ -37,7 +39,8 @@
     "rpt-sort-fliter":"npm run test:spec cypress\\e2e\\test\\filtering-and-sorting-tests.cy.js",
     "rpt-search-test":"npm run test:spec cypress\\e2e\\test\\search-tests.cy.js",
     "rpt-contact-page":"npm run test:spec cypress\\e2e\\test\\contact-page-test.cy.js",
-    "rpt-ddt-contact-page":"npm run test:spec cypress\\e2e\\test\\contact-page-data-driven-tests.cy.js"
+    "rpt-ddt-contact-page":"npm run test:spec cypress\\e2e\\test\\contact-page-data-driven-tests.cy.js",
+    "rpt-ddt-auth-tests":"npm run test:spec cypress\\e2e\\test\\authentication_data_driven_tests.cy.js"
   },
   "keywords": [],
   "author": "",
