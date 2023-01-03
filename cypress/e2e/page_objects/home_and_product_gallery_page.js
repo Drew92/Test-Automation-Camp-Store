@@ -53,7 +53,7 @@ class HomePage extends Page {
     }
 
     get p_ProductPrice(){
-        return (`[class='chakra-text css-0']`);
+        return (`div>p[class='chakra-text css-0']`);
     }
 
     get selectCategory(){
@@ -78,7 +78,6 @@ class HomePage extends Page {
             cy.get(this.btnIncreaseQty_QFittedHat).should('be.visible').click().click(); //increases item qty by 2
         }
         cy.get(this.btnAddToCart_QFittedHat).should('be.visible').click();
-         
     }
 
     selectSortOption(option){
