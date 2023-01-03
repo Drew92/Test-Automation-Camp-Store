@@ -1,5 +1,5 @@
 
-# Andrew Gayle - Automation Camp Store - Test Automation Project
+# Automation Camp Store - Test Automation Project
 
 ### Website URL: https://ui-automation-camp.vercel.app/
 
