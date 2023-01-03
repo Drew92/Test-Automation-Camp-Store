@@ -11,7 +11,7 @@ describe("Authentication Tests",()=>{
         cy.get(AuthPage.btnSignInOrRegister).click();
       });
 
-    it("Sign in with existing account",()=>{
+    it("Should sign in with existing account ",()=>{
         AuthPage.login("drewtest@ahmail.com","bc123Quality");
 
         //assertions
@@ -19,7 +19,7 @@ describe("Authentication Tests",()=>{
 
     });
 
-    it("Register new account",()=>{
+    it("Should register new account",()=>{
         AuthPage.register(faker.internet.email(),faker.internet.password(25));
 
         //assertions
@@ -27,13 +27,13 @@ describe("Authentication Tests",()=>{
 
     });
 
-    it("Attempt to register account with password that doesn’t meet the required length",()=>{
+    it("Should not register account with password that doesn’t meet the required length ",()=>{
 
         //Set argument for all css locators and input values to be passed to orign
         const sentArgs={emailValue:faker.internet.email(), passwordValue:faker.internet.password(7),
                         emailLoactor:AuthPage.inputEmail, passwordLocator:AuthPage.inputPassord,
                         loginBtnLocator:AuthPage.btnLoginOrSignUp, signUpTabLocator:AuthPage.tabLoginOrSignUp,
-                        passwordErrorLocator:AuthPage.divPasswordErrorMessage}
+                        passwordErrorLocator:AuthPage.divLoginErrorMessage}
 
         cy.origin(
             "https://dev-mlluudmotpwoldtv.us.auth0.com",

@@ -27,8 +27,12 @@ class AuthPage extends Page {
         return (`button[name='submit']`);
     }
 
-    get divPasswordErrorMessage(){
+    get divLoginErrorMessage(){
         return (`.auth0-lock-error-invalid-hint`);
+    }
+
+    get spanInvalidLoginCredentials(){
+        return (`.fadeInUp span`);
     }
 
     //Page object methods
