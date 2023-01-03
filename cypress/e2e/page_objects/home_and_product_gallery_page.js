@@ -15,7 +15,7 @@ class HomePage extends Page {
     }
 
     get p_ProductPrice(){
-        return (`[class='chakra-text css-0']`);
+        return (`div>p[class='chakra-text css-0']`);
     }
 
     get selectCategory(){
